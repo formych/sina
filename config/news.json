@@ -1,0 +1,22 @@
+[
+  {
+    "name": "china",
+    "url": "http://news.sina.com.cn/china/",
+    "elements": "html body .content .blk12 a"
+  },
+  {
+    "name": "world",
+    "url": "http://news.sina.com.cn/world/",
+    "elements": "html body .content .blk12 a"
+  },
+  {
+    "name": "society",
+    "url": "http://news.sina.com.cn/society/",
+    "elements": "html body .content .blk12 a, body .content2 .blk6-c>div:not(#subShowContent6) .news-item h2 a"
+  },
+  {
+    "name": "mil",
+    "url": "http://mil.news.sina.com.cn/",
+    "elements": "body .wrap .p1 .blk2 a, body .blk3 .comment-list a"
+  }
+]
