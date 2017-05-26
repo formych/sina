@@ -52,6 +52,24 @@ v3:
 		commens：为上面对应的评论文件
 	最佳实践：
 		由于新闻和评论的更新时间，把这个脚本的执行加入crontab中，定时执行从而达到资源和效率的最大化
-		目前getNews的脚本执行时间为每天的10点，14点，19点
+
+		目前getNews的脚本执行时间为每天的10点
 		getNewsId的脚本执行时间为每天的21点
 		getComments的脚本执行时间为每天的23点
+
+	提取评论数据内容:
+                1.进入到comments下面
+                2.cat  */*.txt > all.txt
+                3.    ../run.sh all.txt
+                4.scp all.txt到指定的目录
+                5.rm -rf ./* (建议删除，方便每次的处理)
+
+
+Bug处理：
+    由于该脚本存在一些缺陷，会生成僵尸进程
+    执行ps -ef | grep node
+    查看是否有僵尸进程
+        1.node getNews
+        2.node getNewsId
+    清空日志文件
+        echo > log
